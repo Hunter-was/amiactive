@@ -3,37 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <title>Am I Active?</title>
+  <!-- Load Cooper Hewitt font -->
   <link href="https://fonts.googleapis.com/css2?family=Cooper+Hewitt:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       padding: 0;
-      background-color: #f0f0f0; /* Light gray background */
+      /* Use your actual image file name and make sure it's uploaded */
+      background: url("background.png") no-repeat center center fixed;
+      background-size: cover;
       font-family: 'Cooper Hewitt', sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
     }
 
-    .container {
-      position: relative;
-      width: 90%;
-      max-width: 1000px;
-    }
-
-    .main-image {
-      width: 100%;
-      display: block;
-    }
-
+    /* Transparent input positioned over the text box in your image */
     .input-overlay {
       position: absolute;
-      /* Adjust these values to line up with the white box in the image */
-      bottom: 12%;
+      bottom: 100px; /* Adjust to fit your image layout */
       left: 50%;
       transform: translateX(-50%);
-      width: 60%;
+      width: 60%;  /* Adjust width to match box size in the image */
       height: 60px;
       display: flex;
       align-items: center;
@@ -58,11 +46,8 @@
   </style>
 </head>
 <body>
-  <div class="container">
-    <img src="background.png.png" alt="Interface Background" class="main-image">
-    <div class="input-overlay">
-      <input type="text" placeholder="enter here">
-    </div>
+  <div class="input-overlay">
+    <input type="text" placeholder="enter here">
   </div>
 </body>
 </html>
