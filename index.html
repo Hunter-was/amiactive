@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,14 +8,29 @@
     body {
       margin: 0;
       padding: 0;
-      background: url("background.png") no-repeat center center fixed;
-      background-size: cover;
+      background-color: #f0f0f0; /* Light gray background */
       font-family: 'Cooper Hewitt', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      position: relative;
+      width: 90%;
+      max-width: 1000px;
+    }
+
+    .main-image {
+      width: 100%;
+      display: block;
     }
 
     .input-overlay {
       position: absolute;
-      bottom: 100px;
+      /* Adjust these values to line up with the white box in the image */
+      bottom: 12%;
       left: 50%;
       transform: translateX(-50%);
       width: 60%;
@@ -44,8 +58,11 @@
   </style>
 </head>
 <body>
-  <div class="input-overlay">
-    <input type="text" placeholder="enter here">
+  <div class="container">
+    <img src="background.png" alt="Interface Background" class="main-image">
+    <div class="input-overlay">
+      <input type="text" placeholder="enter here">
+    </div>
   </div>
 </body>
 </html>
