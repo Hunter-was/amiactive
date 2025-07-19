@@ -50,7 +50,29 @@
 </head>
 <body>
   <div class="input-overlay">
-    <input type="text" placeholder="enter here" />
+    <input id="codeInput" type="text" placeholder="enter here" />
   </div>
+
+  <script>
+    const codeLinks = {
+      "Rowan Kehoe": "https://youtube.com",
+      "banana": "https://example.com/banana",
+      "dog": "https://example.com/dog"
+    };
+
+    const input = document.getElementById("codeInput");
+
+    input.addEventListener("keydown", function (event) {
+      if (event.key === "Enter") {
+        const userInput = input.value.trim().toLowerCase();
+
+        if (codeLinks[userInput]) {
+          window.location.href = codeLinks[userInput];
+        } else {
+          alert("Code not recognized.");
+        }
+      }
+    });
+  </script>
 </body>
 </html>
