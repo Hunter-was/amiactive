@@ -8,7 +8,7 @@
     body {
       margin: 0;
       padding: 0;
-      background: url("Active Non-active Silent (2).png") no-repeat center center fixed;
+      background: url("background.png") no-repeat center center fixed;
       background-size: cover;
       font-family: 'Cooper Hewitt', sans-serif;
     }
@@ -23,10 +23,9 @@
       padding: 20px;
       border: 5px solid black;
       border-radius: 20px;
-      background-color: white;
+      background-color: transparent; /* Now fully transparent */
       font-size: 24px;
       text-align: center;
-      box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
       font-family: 'Cooper Hewitt', sans-serif;
     }
 
@@ -36,17 +35,20 @@
       outline: none;
       font-size: 24px;
       background: transparent;
+      color: black;
+      text-align: center;
       font-family: 'Cooper Hewitt', sans-serif;
     }
 
     ::placeholder {
-      color: #888;
+      color: #555;
+      opacity: 0.7;
     }
   </style>
 </head>
 <body>
   <div class="input-box">
-    <input type="text" placeholder="Type the name of the person that you wish to seek activeness">
+    <input type="text" placeholder="enter here">
   </div>
 </body>
 </html>
