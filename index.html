@@ -1,1 +1,49 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Status Display</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('back.png') no-repeat center center fixed;
+      background-size: cover;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .status-container {
+      display: flex;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.5); /* optional: makes text stand out */
+      padding: 10px 20px;
+      border-radius: 12px;
+      color: white;
+    }
+
+    .dot {
+      width: 12px;  /* size similar to a Discord dot */
+      height: 12px;
+      background: url('active-color.png') no-repeat center center;
+      background-size: cover;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    .text {
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="status-container">
+    <div class="dot"></div>
+    <div class="text">Rowan Kehoe ; custom status: "Playing Minecraft"</div>
+  </div>
+</body>
+</html>
