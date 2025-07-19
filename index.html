@@ -3,16 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <title>Am I Active?</title>
-  <!-- Load Cooper Hewitt font -->
-  <link href="https://fonts.googleapis.com/css2?family=Cooper+Hewitt:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- Self‑hosted Cooper Hewitt font -->
   <style>
+    /* 1 – Load your WOFF2 file */
+    @font-face {
+      font-family: 'Cooper Hewitt';
+      src: url('cooper.woff2') format('woff2');   /* change path if needed */
+      font-weight: 400;   /* regular weight; add another block if you have Bold, etc. */
+      font-style: normal;
+      font-display: swap;
+    }
+
+    /* 2 – Page styles */
     html, body {
       margin: 0;
       padding: 0;
       height: 100%;
       font-family: 'Cooper Hewitt', sans-serif;
       background-color: black;
-      background-image: url("background.png.png");
+      background-image: url("background.png.png"); /* change if your file name differs */
       background-repeat: no-repeat;
       background-position: center center;
       background-attachment: fixed;
@@ -21,7 +31,7 @@
 
     .input-overlay {
       position: absolute;
-      bottom: 60px; /* adjust this to move input up/down */
+      bottom: 60px;            /* adjust to fit the white box */
       left: 50%;
       transform: translateX(-50%);
       width: 60%;
@@ -40,17 +50,7 @@
       background: transparent;
       color: black;
       outline: none;
-      font-family: 'Cooper Hewitt', sans-serif;
+      font-family: 'Cooper Hewitt', sans-serif;  /* use the loaded font */
     }
 
     ::placeholder {
-      color: rgba(0, 0, 0, 0.5);
-    }
-  </style>
-</head>
-<body>
-  <div class="input-overlay">
-    <input type="text" placeholder="enter here" />
-  </div>
-</body>
-</html>
