@@ -1,1 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Status Display</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    body {
+      background: url("background.png") no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+    }
+
+    #container {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      font-size: 80px;
+      font-weight: bold;
+      color: black;
+      text-shadow: 2px 2px 6px white;
+    }
+
+    #statusDot {
+      width: 80px;
+      height: 80px;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="container">
+    <span>@SSWDC</span>
+    <img id="statusDot" src="">
+  </div>
+
+  <script>
+    /*
+       CHANGE THIS WORD to switch the status:
+
+       "active"     = green dot
+       "non-active" = yellow dot
+       "silent"     = red dot
+    */
+
+    let status = "active";  // <--- change this as needed!
+
+    const dotPaths = {
+      "active": "greendot.png",
+      "non-active": "yellowdot.png",
+      "silent": "reddot.png"
+    };
+
+    document.getElementById("statusDot").src = dotPaths[status];
+  </script>
+
+</body>
+</html>
 
