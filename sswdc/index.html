@@ -6,30 +6,25 @@
   <style>
     html, body {
       height: 100%;
+      width: 100%;
       margin: 0;
+      padding: 0;
       overflow: hidden;
-      background: black; /* black bars if needed */
+      background-color: black; /* fill empty space */
+      background-image: url("background.png");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: contain; /* no stretching */
     }
 
-    /* Background wrapper */
-    #bg {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      object-fit: contain; /* keep aspect ratio */
-      z-index: -1;
-    }
-
-    /* Center content */
     #container {
-      position: relative;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       display: flex;
       align-items: center;
-      justify-content: center;
       gap: 20px;
-      height: 100vh; 
       font-size: 80px;
       font-weight: bold;
       font-family: Arial, sans-serif;
@@ -37,21 +32,15 @@
       text-shadow: 2px 2px 6px white;
     }
 
-    /* Status dot (keeps perfect circle) */
     #statusDot {
       width: 80px;
       aspect-ratio: 1/1;
       object-fit: contain;
-      display: block;
     }
   </style>
 </head>
 <body>
 
-  <!-- Background image -->
-  <img id="bg" src="background.png">
-
-  <!-- Centered text + dot -->
   <div id="container">
     <span>@SSWDC</span>
     <img id="statusDot" src="">
@@ -59,14 +48,14 @@
 
   <script>
     /*
-       CHANGE THIS WORD to switch the status:
+       CHANGE THIS WORD to switch status:
 
-       "active"     = green dot
-       "non-active" = yellow dot
-       "silent"     = red dot
+       "active"     = greendot.png
+       "non-active" = yellowdot.png
+       "silent"     = reddot.png
     */
 
-    let status = "active";  // <--- change this
+    let status = "active"; // <--- change this
 
     const dotPaths = {
       "active": "greendot.png",
